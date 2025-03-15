@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.flex-layout {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.left-column {
+  flex: 1;
+  max-width: 460px;
+  margin-top: 100px;
+}
+
+.site-header {
+  margin-bottom: 40px;
+}
+
+.logo-container img {
+  width: 260px;
+  height: auto;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 50px;
+}
+
+.form-input.error {
+  border-color: #ff3b30;
+}
+
+.error-message {
+  color: #ff3b30;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.submit-button {
+  background-color: #ff9147;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 50px;
+  width: 150px;
+  white-space: nowrap;
+}
+
+.submit-button:hover {
+  background-color: #f08135;
+}
+
+.submit-button:disabled {
+  background-color: #ffb88a;
+  cursor: not-allowed;
+}
+
+.right-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.service-card {
+  background-color: #1a3653;
+  border-radius: 8px;
+  padding: 30px 25px;
+  color: white;
+  height: 100%;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.service-icon {
+  margin-right: 15px;
+}
+
+.service-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.service-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #50b5ff;
+}
+
+.service-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.form-container-2 {
+  display: none !important;
+}
+
+@media (max-width: 1440px) {
+  .flex-layout {
+    gap: 40px;
+  }
+  
+  .left-column {
+    margin-top: 80px;
+  }
+  
+  .right-column {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1080px) {
+  .flex-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .left-column {
+    max-width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container {
+    order: 2;
+    margin-top: 30px;
+  }
+  
+  .description, .main-title, .site-header {
+    order: 1;
+  }
+  
+  .right-column {
+    margin-top: 40px;
+  }
+  
+  .submit-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-title {
+    font-size: 28px;
+  }
+  
+  .form-container {
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-layout {
+    flex-direction: column;
+  }
+  
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .main-title {
+    font-size: 24px;
+  }
+  
+  .description {
+    font-size: 14px;
+  }
+  
+  .form-container {
+    display: none !important;
+  }
+
+  .form-container-2 {
+    display: block !important;
+    order: 3;
+    margin-top: 30px;
+  }
+  
+  .right-column {
+    order: 2;
+    margin-top: 30px;
+  }
+  
+  .site-header, .main-title, .description {
+    order: 1;
+  }
+  
+  .submit-button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .container {
+    max-width: 1800px;
+  }
+  
+  .main-title {
+    font-size: 42px;
+  }
+  
+  .description {
+    font-size: 18px;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .service-card {
+    padding: 35px 30px;
+  }
+  
+  .service-icon img {
+    width: 40px;
+    height: 40px;
+  }
+}
